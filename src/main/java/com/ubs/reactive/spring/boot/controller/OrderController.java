@@ -24,7 +24,7 @@ public class OrderController {
     ItemService orderItemsService;
 
     @GetMapping("/{orderId}")
-    private Mono<Order> getOrderDetails(@PathVariable Integer orderId) {
+    public Mono<Order> getOrderDetails(@PathVariable Integer orderId) {
 
         Mono<Order> orderToReturn = orderService.getOrder(orderId)
 
